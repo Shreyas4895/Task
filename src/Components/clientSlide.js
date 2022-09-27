@@ -1,6 +1,5 @@
 import { cardData } from "../utils/mockData";
 import './clientSlide.css';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
