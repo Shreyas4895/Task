@@ -1,9 +1,13 @@
-*{
-  box-sizing: border-box;
-}
+
 
 .App {
-  text-align: center;
+  text-align: 100%;
+  width:99%;
+  height: 550px;
+  border-radius: 15px;
+  background-size: cover;
+  padding-left: 1%;
+  border-radius: 5%;
 }
 
 .App-logo {
@@ -39,4 +43,13 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+
+
+.carousel.carousel-slider {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
 }
