@@ -6,7 +6,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
 import PropTypes from 'prop-types'
-import {Card,QuoteIcon,Container,Name,ImageContainer,Content,Image,Details,Paragraph,Title} from './styles';
+import {Card,QuoteIcon,Container,Name,IconContainer,ImageContainer,Content,Image,Details,Paragraph,Title} from './styles';
 
 const ClientSlide=() =>{
 return (
@@ -15,7 +15,6 @@ return (
         slidesPerView={4}
         slidesPerGroup={4}
         loop={true}
-        loopFillGroupWithBlank={true}
         pagination={{
           clickable: true,
         }}
@@ -24,12 +23,15 @@ return (
         className="mySwiper"
       >
         {cardData.map((card,id) => 
-        <SwiperSlide>
+        <div>
+        <SwiperSlide className="swiper-slide">
               <Card key={id}>
                 <ImageContainer style={{backgroundColor: `${card.color}`}} >
                     <Image src={card.Image}   alt="Card"/>
                 </ImageContainer>
+                <IconContainer>
              <QuoteIcon src={card.icon} alt="Icon"/>
+             </IconContainer>
                 <Content>
                      <Paragraph>
                         {card.para}
@@ -41,6 +43,7 @@ return (
                 </Content>
              </Card>
              </SwiperSlide>
+             </div>
             )
         }  
     </Swiper> 
