@@ -1,29 +1,39 @@
 import styled from 'styled-components';
 
+
+const Container=styled.div`
+    width:100%;
+    height:70%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4%;
+
+`
 const Card=styled.div`
-    margin:0.5%;
-    font-size: 12px;
-    color:black;
-    background-color: white;
-    margin-top:2%;
-    width:20%;
-    border-radius: 5%;
+    width:75%;
+    height:95%;
     border: 1px solid black;
+    background:white;
+    margin:1%;
+    font-size: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 5%;
+    object-fit: cover;
+
+
 
 `
 const QuoteIcon=styled.img`
- 
      width: 16%;
     border-radius: 66%;
     background-color: #126ada;
     position: absolute;
     margin-top: 35%;
-    margin-left: 10%;
+    margin-left: 4%;
     object-fit: scale-down;
     `
-const Image=styled.img`
-`
-
 
 
 const SideTitle =styled.div`
@@ -35,17 +45,7 @@ color:white;
 border-radius: 55%
 }
 `
-const Container=styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    -moz-transition: all .5s;
-    transition: all .5s;
-    height: 70%;
-    border-radius: 15px;
-    margin-left: 7%;
 
-`
 
 const Main=styled.div`
 width:89%;
@@ -58,25 +58,48 @@ background-color:#126ada;
     border-radius:1%;
 `
 const CarousalContainer=styled.div``
+
+
+const Details=styled.div`
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    font-size: 14px;
+    color: #006ada;
+    margin-bottom: 0;
+    font-family: Lato,sans-serif;
+`
 const Name=styled.h2`
-color:blue;
-margin:0;
+    font-size:14px;
+    color:#006ada;
+    margin:0;
 `
 const Content=styled.div`
-/* padding:1%;
+margin:0;
+padding:5%;
 display: flex;
     flex-direction: column;
+    justify-content: space-between;
     flex-wrap: wrap;
-    align-items: flex-start; */
+    height: 200px;
+    margin-top: 16%;
 `
-const Paragraph=styled.p`
-margin:0;
-margin-top:2%;
-margin-bottom:2%;
+const Paragraph=styled.div`
+    margin-right:1%;
+    margin-left:1%;
+    text-align: start;
+    font-size: 12px;
+    color: #444;
+    font-weight: 600;
+    text-align: justify;
+    font-family: Lato,sans-serif;
 `
 
 const Title=styled.h3`
-margin:0;
+    font-size: 13px;
+    font-weight: 500;
+    color: #444;
+    margin:0;
 `
 
 
@@ -87,7 +110,24 @@ const CredentialContainer=styled.div`
 height:30%;
 `
 
-const ImageContainer=styled.div``
+const ImageContainer=styled.div`
+    width:100%;
+    height: 110px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    `
 
+const Image=styled.img`
+    width: 95%;
+    height: 60%;
+    text-align: center;
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+    position:relative;
+`
 
-export {Card,Main,QuoteIcon,ImageContainer,CredentialContainer,SideTitle,Image,Content,Container,Name,CardContainer,Paragraph,Title,CarousalContainer};
+export {Card,Main,QuoteIcon,Name,ImageContainer,CredentialContainer,SideTitle,Image,Content,Container,Details,CardContainer,Paragraph,Title,CarousalContainer};

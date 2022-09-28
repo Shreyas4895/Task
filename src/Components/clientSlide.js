@@ -5,12 +5,12 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
-import { QuoteIcon } from "./styles";
-// import {Card,QuoteIcon,Container,CardContainer,ImageContainer,Content,CredentialContainer,Image,Name,Paragraph,Title} from './styles';
+import PropTypes from 'prop-types'
+import {Card,QuoteIcon,Container,Name,ImageContainer,Content,Image,Details,Paragraph,Title} from './styles';
 
-const ClientSlide=(props) =>{
+const ClientSlide=() =>{
 return (
-    <div className="container">
+    <Container>
      <Swiper
         slidesPerView={4}
         slidesPerGroup={4}
@@ -23,28 +23,35 @@ return (
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
-        {cardData.map((card,index) => 
+        {cardData.map((card,id) => 
         <SwiperSlide>
-              <div className="card" key={index}>
-                <div className="imageContainer" style={{backgroundColor: `${card.color}`}} >
-                    <img src={card.Image}   alt="Card"/>
-                </div>
-             <QuoteIcon src={card.quoteIcon} alt="Icon"/>
-                <div className="content">
-                     <div className="para">
-                        <p>{card.para}</p>
-                    </div>
-                   <div className="name">
-                    <h2>{card.name}</h2>
-                    <h3>{card.title}</h3>
-                 </div>
-                </div>
-             </div>
+              <Card key={id}>
+                <ImageContainer style={{backgroundColor: `${card.color}`}} >
+                    <Image src={card.Image}   alt="Card"/>
+                </ImageContainer>
+             <QuoteIcon src={card.icon} alt="Icon"/>
+                <Content>
+                     <Paragraph>
+                        {card.para}
+                    </Paragraph>
+                   <Details>
+                    <Name>{card.name}</Name>
+                    <Title>{card.title}</Title>
+                 </Details>
+                </Content>
+             </Card>
              </SwiperSlide>
             )
         }  
     </Swiper> 
-</div>
+</Container>
 )
 }
 export default ClientSlide;
+
+
+ClientSlide.propTypes = {
+  name: PropTypes.string,
+  para: PropTypes.string,
+  title: PropTypes.string,
+}
