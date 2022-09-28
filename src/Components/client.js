@@ -7,7 +7,7 @@ const Client=()=>{
    <Main>
     <SideTitle>
             <img src="https://www.doodleblue.com/images/home/client-testimonial-quotes.jpg" alt="Site"/>
-            <p>"What clients have to say about us"</p>
+            <p>What clients have to say about us</p>
     </SideTitle>
     <ClientSlide/>
  </Main>

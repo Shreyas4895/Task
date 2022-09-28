@@ -2,15 +2,19 @@ import styled from 'styled-components';
 
 
 const Container=styled.div`
-    width:100%;
+    width:86%;
     height:70%;
     display: flex;
     flex-wrap: wrap;
     margin-top: 4%;
+    position:relative;
 
+@media (max-width: 450px) {
+    width:100%;
+}
 `
 const Card=styled.div`
-    width:75%;
+    flex-basis:85%;
     height:95%;
     border: 1px solid black;
     background:white;
@@ -22,7 +26,15 @@ const Card=styled.div`
     border-radius: 5%;
     object-fit: cover;
 
-
+@media (max-width: 450px) {
+    flex-basis:100%;
+}
+@media (max-width: 768px) {
+    flex-basis:85%;
+}
+@media (max-width: 1024px) {
+    flex-basis:75%;
+}
 
 `
 const QuoteIcon=styled.img`
@@ -37,12 +49,29 @@ const QuoteIcon=styled.img`
 
 
 const SideTitle =styled.div`
+width:15%;
 margin-top: 8%;
 margin-left:1%;
+font-family: Lato,sans-serif;
+font-weight: 600;
 color:white;
+padding: 1%;
+
 
 & img{
-border-radius: 55%
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    background-size: 54px;
+    background-color: #fff;
+    background-position: 50%;
+}
+& p{
+    color: #fff;
+    padding-top: 15px;
+    font-weight: 600;
+    line-height: 30px;
+    font-size: 20px;
 }
 `
 

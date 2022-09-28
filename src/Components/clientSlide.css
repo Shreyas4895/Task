@@ -3,7 +3,12 @@
   height: 100%;
 }
 
+.swiper-button-prev{
+left:0px;
+position:absolute;
+}
 .swiper-slide {
+width: 20%;
   text-align: center;
   font-size: 18px;
   display: -webkit-box;
